@@ -1,0 +1,31 @@
+ori=read.table("1.txt")
+names(ori)=c("oz", "solar","wind","temp","mon","day")
+data=data.frame(ori)
+
+aa=(data$oz nrow=47)
+aa??
+
+is.na(data$oz)
+
+mean(data$oz,na.rm=TRUE)
+str(data$oz,na.rm=TRUE)
+
+data2=data.frame(data$oz>31)
+data2
+
+cc=data[data[,1] >31 ,,drop=FALSE]
+cc=cc[cc[,4] >90 ,,drop=FALSE]
+mean(cc$solar,na.rm=TRUE)
+summary(cc$solar,na.rm=TRUE)
+
+cc=data[!complete.cases(data$oz),]
+str(cc)
+
+
+
+bb=data[data[,5] ==6 ,,drop=FALSE]
+
+mean(bb$temp,na.rm=TRUE)
+
+bb=data[data[,5] ==5 ,,drop=FALSE]
+summary(bb)
